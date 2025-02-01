@@ -779,3 +779,40 @@ Used to locate this view in end-to-end tests.
 | Type   |
 | ------ |
 | string |
+
+## Refs
+
+Refs provided by `View` elements implement the `ReactNativeElement` interface.
+
+### Example
+
+```jsx
+// Using ref callbacks
+function MyComponent() {
+  return (
+    <View ref={node => {
+      if (node != null) {
+        console.log('Bounding client rect is' node.getBoundingClientRect());
+      }
+    }} />
+  )
+}
+```
+
+```jsx
+// Using ref setters
+function MyComponent() {
+  const ref = useRef();
+
+  useEffect(() => {
+    const node = ref.current;
+    if (node != null) {
+      console.log('Bounding client rect is' node.getBoundingClientRect());
+    }
+  }, []);
+
+  return (
+    <View ref={ref} />
+  )
+}
+```
