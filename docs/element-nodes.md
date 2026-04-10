@@ -3,6 +3,8 @@ id: element-nodes
 title: Element nodes
 ---
 
+import ExperimentalAPIWarning from './\_experimental-channel-api-warning.mdx';
+
 Element nodes represent native components in the native view tree (similar to [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element) nodes on Web).
 
 They are provided by all native components, and by many built-in components, via refs:
@@ -126,6 +128,15 @@ From [`Node`](https://developer.mozilla.org/en-US/docs/Web/API/Node):
   - [`getRootNode()`](https://developer.mozilla.org/en-US/docs/Web/API/Node/getRootNode)
     - ℹ️ Will return a reference to itself if the component is not mounted.
   - [`hasChildNodes()`](https://developer.mozilla.org/en-US/docs/Web/API/Node/hasChildNodes)
+
+From [`EventTarget`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget): 🧪
+
+<ExperimentalAPIWarning />
+
+- Methods
+  - [`addEventListener()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+  - [`removeEventListener()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)
+  - [`dispatchEvent()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent)
 
 ### Legacy API
 
