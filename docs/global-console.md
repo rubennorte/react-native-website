@@ -3,17 +3,23 @@ id: global-console
 title: console
 ---
 
-:::warning
-🚧 This page is work in progress, so please refer to the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/API/console) for more information.
-:::
+The global [`console`](https://developer.mozilla.org/en-US/docs/Web/API/console) object, as defined in Web specifications. It provides access to the debugging console, with methods for logging, grouping, timing, and more.
 
-The global `console` object, as defined in Web specifications.
+React Native supports the standard `console` methods (such as `console.log`, `console.warn`, and `console.error`). Refer to the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/API/console) for details on the standard API.
 
 ---
 
+# Reference
+
 ## Methods
 
-### `timeStamp()`
+For the standard methods, see the [documentation in MDN](https://developer.mozilla.org/en-US/docs/Web/API/console).
+
+### `timeStamp()` ⚠️
+
+:::warning[Non-standard]
+This is a React Native / DevTools specific extension.
+:::
 
 ```tsx
 console.timeStamp(

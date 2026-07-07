@@ -3,8 +3,26 @@ id: global-cancelAnimationFrame
 title: cancelAnimationFrame
 ---
 
-:::warning
-🚧 This page is work in progress, so please refer to the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/API/Window/cancelAnimationFrame) for more information.
-:::
+The global [`cancelAnimationFrame`](https://developer.mozilla.org/en-US/docs/Web/API/Window/cancelAnimationFrame) function, as defined in Web specifications. It cancels an animation frame request previously scheduled with [`requestAnimationFrame()`](global-requestAnimationFrame).
 
-The global `cancelAnimationFrame` function, as defined in Web specifications.
+---
+
+# Reference
+
+## Methods
+
+### `cancelAnimationFrame()`
+
+See [documentation in MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/cancelAnimationFrame).
+
+Cancels a callback previously scheduled with [`requestAnimationFrame()`](global-requestAnimationFrame). If the identifier does not correspond to a pending request, this method does nothing.
+
+```ts
+cancelAnimationFrame(id): void
+```
+
+#### Parameters
+
+**`id`**
+
+The identifier of the request to cancel, as returned by the corresponding call to [`requestAnimationFrame()`](global-requestAnimationFrame).
